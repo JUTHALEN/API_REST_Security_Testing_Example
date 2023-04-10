@@ -1,5 +1,12 @@
 package com.example.services;
 
+import static org.assertj.core.api.Assertions.assertThat;
+//Para seguir el enfoque de BDD con Mockito se necesita los siguientes métodos:
+import static org.mockito.BDDMockito.given;
+
+import java.util.Collections;
+import java.util.List;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,14 +21,6 @@ import com.example.dao.PresentacionDao;
 import com.example.dao.ProductoDao;
 import com.example.entities.Presentacion;
 import com.example.entities.Producto;
-
-import static org.assertj.core.api.Assertions.assertThat;
-
-//Para seguir el enfoque de BDD con Mockito se necesita los siguientes métodos:
-import static org.mockito.BDDMockito.given;
-
-import java.util.Collections;
-import java.util.List;
 
 @ExtendWith(MockitoExtension.class)
 @AutoConfigureTestDatabase(replace = Replace.NONE)
